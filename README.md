@@ -79,8 +79,7 @@ Certifique-se de ter o Node.js instalado em sua máquina para instalar as depend
 
 #### Coisas a Fazer
 - [ ] Implementar a funcionalidade de redirecionamento após o login para o link compartilhado
-- [ ] Melhorar o design e layout da página de login
-- [ ] concertar bugs em algumas funcionalidades
+- [ ] consertar bugs em algumas funcionalidades
 - [ ] Otimizar código, refatorando alguns componentes para deixá-los mais genérico
 - [ ] Adicionar testes automatizados para garantir a robustez do código
 

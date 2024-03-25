@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  desafiotecnico:
+    image: desafiotecnico
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8081:80
