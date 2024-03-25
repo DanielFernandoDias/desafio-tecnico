@@ -28,7 +28,6 @@ export class AboutComponent {
     const state = this.router?.getCurrentNavigation()?.extras.state;
     if (state && state['data']) {
       this.username = state['data'].key;
-      console.log(state['data'].key);
     }
   }
 

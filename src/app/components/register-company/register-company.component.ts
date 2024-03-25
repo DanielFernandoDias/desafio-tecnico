@@ -61,9 +61,6 @@ export class RegisterCompanyComponent {
       const companyData = this.formParceiro.value;
       const objeto = this.prepararObjeto(companyData);
 
-      console.log(objeto);
-
-
       this.companyService.registerCompany(objeto).subscribe(
         response => {
           this.openSnackBar('Parceiro cadastrado com sucesso!', 'Ok');
