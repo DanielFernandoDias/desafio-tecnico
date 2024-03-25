@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+
+  .card-login {
+    width: 350px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgb(211, 211, 211);
+    padding: 10px 20px;
+
+    .conteudo-login {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+  }
+}
+
+
+.checkbox {
+  margin-left: 20px;
+  display: flex;
+  gap: 5px;
+
+
+  input {
+    width: 15px;
+  }
+
+}

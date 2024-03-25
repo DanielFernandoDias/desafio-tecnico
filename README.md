@@ -1,27 +1,74 @@
-# DesafioTecnico
+## Projeto de Gestão de Parceiros e Empresas Externas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
+Este projeto consiste em uma aplicação web para gerenciamento de parceiros e empresas externas, desenvolvido utilizando Angular para o frontend e integração com uma API para persistência de dados.
 
-## Development server
+### Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Página de Login**: Permite ao usuário entrar na aplicação inserindo seu usuário e senha. Ao clicar em "Entrar", o usuário é redirecionado para a página inicial pois não possui autenticação.
 
-## Code scaffolding
+- **Manter Conectado**: Se o usuário marcar a opção "Manter Conectado" ao fazer login, suas credenciais serão armazenadas no cookie. Caso contrário, as credenciais serão armazenadas no Local Storage.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Página Inicial**: Apresenta um layout da aplicação com um menu contendo opções para cadastrar parceiros, listar todos os parceiros, acessar informações sobre a aplicação, sair e também cadastrar e listar empresas externas.
 
-## Build
+- **Cadastro de Parceiro**: Permite ao usuário cadastrar novos parceiros.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Listagem de Parceiros**: Apresenta todos os parceiros em uma tabela paginada, com opções para editar e excluir registros.
 
-## Running unit tests
+- **Página "Sobre a Aplicação"**: Fornece informações sobre o projeto, incluindo tecnologias utilizadas, finalidade da aplicação, entre outros detalhes relevantes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Cadastro de Empresa Externa**: Permite ao usuário cadastrar novas empresas externas.
 
-## Running end-to-end tests
+- **Listagem de Empresas Externas**: Apresenta todas as empresas externas em uma tabela paginada, com opções para editar e excluir registros.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Compartilhamento de Dados da Tabela**: Ao compartilhar o link da página com outra pessoa, ela será redirecionada para a página específica da tabela, mantendo a paginação conforme configurado pelo usuário.
 
-## Further help
+- **Integração com API**: A aplicação se integra com uma API para realizar operações de CRUD (Create, Read, Update, Delete) e persistir os dados.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Instruções para Executar o Projeto
+
+1. Clone este repositório: `git clone` e instala a versão correto do angular no projeto
+
+npm install -g @angular/cli@15
+
+2. Instale as dependências do projeto:
+
+cd <nome-do-projeto>
+npm install
+
+
+3. Execute o servidor de desenvolvimento:
+
+ng serve
+
+
+4. Acesse a aplicação em seu navegador utilizando o seguinte endereço: `http://localhost:4200`
+
+### Requisitos do Ambiente
+
+- Node.js
+- Angular CLI V. 15
+
+Certifique-se de ter o Node.js instalado em sua máquina para instalar as dependências do projeto. Você também precisará do Angular CLI para executar a aplicação localmente.
+
+### To-Do List do Projeto
+
+#### Coisas Feitas
+- [x] Página de Login
+- [x] Funcionalidade de Manter Conectado
+- [x] Página Inicial
+- [x] Cadastro de Parceiro
+- [x] Cadastro de Empresa Externa
+- [x] Listagem de Parceiros
+- [x] Listagem de Empresas Externas
+- [x] Página "Sobre a Aplicação"
+- [x] Compartilhamento de Dados da Tabela
+- [x] Integração com API para Persistir o CRUD
+- [x] README.md completo e descritivo
+
+#### Coisas a Fazer
+- [ ] Implementar a funcionalidade de redirecionamento após o login para o link compartilhado
+- [ ] Melhorar o design e layout da página de login
+- [ ] concertar bugs em algumas funcionalidades
+- [ ] Otimizar código, refatorando alguns componentes para deixá-los mais genérico
+- [ ] Adicionar testes automatizados para garantir a robustez do código
+

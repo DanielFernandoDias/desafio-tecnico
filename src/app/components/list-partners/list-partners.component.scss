@@ -1,0 +1,22 @@
+.father-table {
+    width: 85%;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+        cursor: pointer;
+    }
+
+    .shared {
+        display: flex;
+        gap: 5px;
+        margin-top: 40px;
+        cursor: pointer;
+    }
+}

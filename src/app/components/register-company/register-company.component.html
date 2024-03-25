@@ -1,0 +1,56 @@
+<mat-card-content class="container">
+  <mat-card class="card-login">
+    <mat-card-title>Cadastrar</mat-card-title>
+    <span>Insira as informações da empresa</span>
+    <form [formGroup]="formParceiro" (ngSubmit)="cadastrarCompany()" novalidate>
+      <mat-card-content class="conteudo-login">
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Nome da Empresa</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="companyName"
+            placeholder="Nome da empresa"
+          />
+          <mat-error
+            *ngIf="
+              formParceiro.get('companyName')?.hasError('required') &&
+              formParceiro.get('companyName')?.touched
+            "
+          >
+            Nome é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Nº de Colaboradores</mat-label>
+          <input
+            type="number"
+            matInput
+            formControlName="collaboratorsCount"
+            placeholder="Quantidade de colaboradores"
+          />
+          <mat-error
+            *ngIf="
+              formParceiro.get('collaboratorsCount')?.hasError('required') &&
+              formParceiro.get('collaboratorsCount')?.touched
+            "
+          >
+            Quantidade de colaboradores é <strong>obrigatória</strong>
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+
+      <div class="checkbox">
+        <input type="checkbox" formControlName="isActive" />
+        <label>Está ativa?</label>
+      </div>
+
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary" type="submit">
+          Cadastrar
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</mat-card-content>

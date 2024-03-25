@@ -1,0 +1,170 @@
+<mat-card-content class="container">
+  <mat-card class="card-login">
+    <mat-card-title>Cadastrar</mat-card-title>
+    <span>Insira as informações do parceiro</span>
+    <form
+      [formGroup]="formParceiro"
+      (ngSubmit)="cadastrarParceiro()"
+      novalidate
+    >
+      <mat-card-content class="conteudo-login">
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Nome</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="nome"
+            placeholder="Nome do parceiro"
+          />
+          <mat-error
+            *ngIf="
+              formParceiro.get('nome')?.hasError('required') &&
+              formParceiro.get('nome')?.touched
+            "
+          >
+            Nome é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Descrição</mat-label>
+          <textarea
+            matInput
+            formControlName="descricao"
+            placeholder="Descrição do parceiro"
+          ></textarea>
+          <mat-error
+            *ngIf="
+              formParceiro.get('descricao')?.hasError('required') &&
+              formParceiro.get('descricao')?.touched
+            "
+          >
+            Descrição é <strong>obrigatória</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Repositório Git</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="git"
+            placeholder="repositório"
+          />
+          <mat-error
+            *ngIf="
+              formParceiro.get('git')?.hasError('required') &&
+              formParceiro.get('git')?.touched
+            "
+          >
+            Repositório Git é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>URL Doc</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="doc"
+            placeholder="Link do documento"
+          />
+          <mat-error
+            *ngIf="
+              formParceiro.get('doc')?.hasError('required') &&
+              formParceiro.get('doc')?.touched
+            "
+          >
+            Link do documento é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <div>
+          <mat-form-field appearance="outline" class="form-field-full">
+            <mat-label>Clientes</mat-label>
+            <input
+              type="text"
+              matInput
+              formControlName="cliente"
+              placeholder="ID ou nome do cliente"
+            />
+            <mat-error
+              *ngIf="
+                formParceiro.get('cliente')?.hasError('required') &&
+                formParceiro.get('cliente')?.touched
+              "
+            >
+              ID do cliente é obrigatório
+            </mat-error>
+          </mat-form-field>
+
+          <button
+            class="button-add"
+            mat-raised-button
+            color="secondary"
+            type="button"
+            (click)="adicionarCliente()"
+          >
+            +
+          </button>
+        </div>
+
+        <div class="btn">
+          <button
+            *ngFor="let cliente of clientes"
+            mat-flat-button
+            color="accent"
+          >
+            {{ cliente }}
+          </button>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline" class="form-field-full">
+            <mat-label>Projetos</mat-label>
+            <input
+              type="text"
+              matInput
+              formControlName="projeto"
+              placeholder="nomes dos projetos"
+            />
+            <mat-error
+              *ngIf="
+                formParceiro.get('projeto')?.hasError('required') &&
+                formParceiro.get('projeto')?.touched
+              "
+            >
+              nomes dos projetos é obrigatório
+            </mat-error>
+          </mat-form-field>
+
+          <button
+            class="button-add"
+            mat-raised-button
+            color="secondary"
+            type="button"
+            (click)="adicionarProjeto()"
+          >
+            +
+          </button>
+        </div>
+
+        <div class="btn">
+          <button
+            *ngFor="let projeto of projetos"
+            mat-flat-button
+            color="accent"
+          >
+            {{ projeto }}
+          </button>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary" type="submit">
+          Cadastrar
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</mat-card-content>

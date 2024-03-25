@@ -1,0 +1,61 @@
+<h2 mat-dialog-title>Editar</h2>
+<mat-dialog-content *ngIf="extraValue" class="container-form">
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="dataPartner!.name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descrição</mat-label>
+    <input matInput [(ngModel)]="dataPartner!.description" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Repositório GIT</mat-label>
+    <input matInput [(ngModel)]="dataPartner!.repositoryGit" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>URL DOC</mat-label>
+    <input matInput [(ngModel)]="dataPartner!.urlDoc" />
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-content *ngIf="!extraValue" class="container-form">
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="dataCompany!.companyName" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nº Colaboradores</mat-label>
+    <input matInput [(ngModel)]="dataCompany!.collaboratorsCount" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Está ativo?</mat-label>
+    <input matInput [(ngModel)]="dataCompany!.isActive" />
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button
+    *ngIf="extraValue"
+    color="primary"
+    mat-button
+    [mat-dialog-close]="dataPartner"
+    cdkFocusInitial
+  >
+    Atualizar
+  </button>
+  <button
+    *ngIf="!extraValue"
+    color="primary"
+    mat-button
+    [mat-dialog-close]="dataCompany"
+    cdkFocusInitial
+  >
+    Atualizar
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" *ngIf="isUserAuthenticated; else loginToolbar">
+  <span>{{ toolbarName }}</span>
+
+  <div class="spacer"></div>
+
+  <div class="menu">
+    <button mat-button [matMenuTriggerFor]="cadastro">Cadastro</button>
+    <button mat-button [matMenuTriggerFor]="lista">Listar</button>
+    <button mat-button [routerLink]="['/sobre']">Sobre a aplicação</button>
+    <button (click)="logout()" mat-raised-button color="accent">Sair</button>
+  </div>
+</mat-toolbar>
+
+<mat-menu #cadastro="matMenu">
+  <button mat-menu-item [routerLink]="['/cadastro/parceiro']">
+    Cadastro Parceiro
+  </button>
+  <button mat-menu-item [routerLink]="['/cadastro/empresa-externa']">
+    Cadastro Empresa Externa
+  </button>
+</mat-menu>
+
+<mat-menu #lista="matMenu">
+  <button mat-menu-item [routerLink]="['/listar/parceiros']">
+    Listar Parceiros
+  </button>
+  <button mat-menu-item [routerLink]="['/listar/empresa-externa']">
+    Listar Empresas Externas
+  </button>
+</mat-menu>
+
+<ng-template #loginToolbar>
+  <mat-toolbar color="primary">
+    <span>Login</span>
+  </mat-toolbar>
+</ng-template>
