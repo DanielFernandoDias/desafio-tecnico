@@ -24,9 +24,17 @@ Este projeto consiste em uma aplicação web para gerenciamento de parceiros e e
 
 - **Integração com API**: A aplicação se integra com uma API para realizar operações de CRUD (Create, Read, Update, Delete) e persistir os dados.
 
+### Instruções para navegar pelas funcionalidades
+
+- **Tela de Login**: Nessa página, só é necessário digitar um email válido e uma senha 'qualquer' o app não possui autenticação.
+
+- **Menu**: Ao entrar na página inicial, verá que existe um menu no toolbar
+
+- **Navegação**: Ao navegar pelo sistema, pode acontecer que rolê pequenos bugs, porém esses bugs já foram mapeados
+
 ### Instruções para Executar o Projeto
 
-## Esse Projeto já está em Deploy no seguinte endereço
+#### Esse Projeto já está em Deploy no seguinte endereço
 
 https://desafio-tecnico-jet.vercel.app/
 
