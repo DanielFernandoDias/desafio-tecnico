@@ -26,6 +26,10 @@ Este projeto consiste em uma aplicação web para gerenciamento de parceiros e e
 
 ### Instruções para Executar o Projeto
 
+## Esse Projeto já está em Deploy no seguinte endereço
+
+https://desafio-tecnico-jet.vercel.app/
+
 1. Clone este repositório: `git clone` e instala a versão correto do angular no projeto
 
 npm install -g @angular/cli@15
